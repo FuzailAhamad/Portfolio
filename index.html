@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuzail Ahamad | DevOps & Java Full stack Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="img/icon.jpeg" type="developer">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #4F46E5;
+            --secondary-color: #1E293B;
+            --accent-color: #10B981;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8FAFC;
+            color: var(--secondary-color);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            border: 4px solid white;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">Fuzail Ahamad</div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#about" class="hover:text-indigo-600 transition">About</a></li>
+                        <li><a href="#skills" class="hover:text-indigo-600 transition">Skills</a></li>
+                        <li><a href="#experience" class="hover:text-indigo-600 transition">Experience</a></li>
+                        <li><a href="#projects" class="hover:text-indigo-600 transition">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-indigo-600 transition">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="md:hidden hidden pt-4" id="mobile-menu">
+                <ul class="space-y-3">
+                    <li><a href="#about" class="block hover:text-indigo-600 transition">About</a></li>
+                    <li><a href="#skills" class="block hover:text-indigo-600 transition">Skills</a></li>
+                    <li><a href="#experience" class="block hover:text-indigo-600 transition">Experience</a></li>
+                    <li><a href="#projects" class="block hover:text-indigo-600 transition">Projects</a></li>
+                    <li><a href="#contact" class="block hover:text-indigo-600 transition">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="flex flex-col md:flex-row items-center justify-between mb-20">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Hi, I'm <span class="gradient-text">Fuzail
+                        Ahamad</span></h1>
+                <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">DevOps Engineer | Java Full Stack Developer</h2>
+                <p class="text-lg text-gray-600 mb-8">Crafting scalable server-side solutions with expertise in Java
+                    Full Stack development (Spring Boot, Hibernate) and robust cloud infrastructure on AWS, leveraging
+                    DevOps practices for efficient deployments.</p>
+                <div class="flex space-x-4">
+                    <a href="#projects"
+                        class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300">View
+                        Projects</a>
+                    <a href="#contact"
+                        class="px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition duration-300">Get
+                        in Touch</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative group">
+                    <img src="assets/profile.jpeg" alt="Professional portrait of Fuzail Ahamad"
+                        class="rounded-full shadow-xl w-64 h-64 object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-105" />
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12"><span class="gradient-text">About Me</span></h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4">Who I Am</h3>
+                    <p class="text-gray-600 mb-6">I'm Fuzail Ahamad, a passionate backend developer and DevOps
+                        enthusiast with a strong foundation in computer science and cloud computing. I specialize in
+                        building Java-based applications, designing RESTful APIs, and managing cloud-native deployments
+                        using tools like Jenkins, Docker, and Terraform.</p>
+                    <p class="text-gray-600 mb-6">Through hands-on projects and intensive training, I’ve gained
+                        experience in deploying scalable applications on AWS, setting up CI/CD pipelines, and automating
+                        infrastructure. I'm eager to contribute to real-world development environments where I can apply
+                        both my backend and DevOps skills to build reliable, production-ready systems.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Java</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Spring Boot</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Hibernate</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">AWS</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Docker</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Jenkins</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Terraform</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Git</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">REST APIs</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Linux</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4">My Approach</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-indigo-100 p-3 rounded-full">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Performance First</h4>
+                                <p class="text-gray-600">I focus on writing clean and optimized code using efficient
+                                    algorithms and database queries. Whether it's backend logic or deployment scripts, I
+                                    aim for responsive and reliable performance across the stack.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-indigo-100 p-3 rounded-full">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Security Focused</h4>
+                                <p class="text-gray-600">Security is at the core of every project I work on. From
+                                    validating user input to implementing secure authentication and access controls, I
+                                    ensure the application is protected from the ground up.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-indigo-100 p-3 rounded-full">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Scalable Architecture</h4>
+                                <p class="text-gray-600">I design systems that can grow with user demand. Using tools
+                                    like Docker, AWS, and Terraform, I build scalable and modular infrastructures that
+                                    are easy to maintain and expand.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12"><span class="gradient-text">Technical Skills</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Backend Development -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Backend Development</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Java / Core Java</span><span>85%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Spring Boot (Training)</span><span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>REST APIs</span><span>80%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Hibernate (Training)</span><span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & ORMs -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Database & ORMs</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>MySQL</span><span>80%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>SQL / DBMS</span><span>85%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Cloud & DevOps</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>AWS Services</span><span>80%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Linux</span><span>80%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Docker</span><span>75%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>CI/CD (Jenkins)</span><span>85%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Terraform</span><span>75%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12"><span class="gradient-text">Professional Experience</span>
+            </h2>
+            <div class="relative">
+                <div class="hidden md:block absolute h-full border-r-2 border-indigo-100 left-1/2"></div>
+
+                <!-- Internship 1 -->
+                <div class="mb-12 timeline-item relative pl-12 md:pl-0 md:flex justify-between items-center">
+                    <div class="md:w-5/12 order-last md:order-first">
+                        <img src="assets/kodnest.png" alt="Kodnest Internship" class="rounded-lg shadow-md" />
+                    </div>
+                    <div class="md:w-5/12 order-first md:order-last">
+                        <h3 class="text-xl font-semibold">Software Development Intern</h3>
+                        <h4 class="text-lg text-indigo-600 mb-2">Kodnest Technologies Pvt Ltd</h4>
+                        <p class="text-sm text-gray-500 mb-4">May 2025 – Present</p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Undergoing hands-on training in Java Full Stack Development including Spring Boot and
+                                REST APIs</li>
+                            <li>Worked on real-time projects simulating production-like environments</li>
+                            <li>Applied problem-solving techniques and gained familiarity with modern development
+                                practices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Internship 2 -->
+                <div class="mb-12 timeline-item relative pl-12 md:pl-0 md:flex justify-between items-center">
+                    <div class="md:w-5/12">
+                        <h3 class="text-xl font-semibold">Software Developer Intern</h3>
+                        <h4 class="text-lg text-indigo-600 mb-2">Hashedbit Innovations</h4>
+                        <p class="text-sm text-gray-500 mb-4">July 2024 – Sept 2024</p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Developed responsive UI modules for the Hospital Management System using React.js</li>
+                            <li>Integrated REST APIs using Postman and displayed real-time data in structured tables
+                            </li>
+                            <li>Collaborated with backend developers to ensure smooth data flow and app performance</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-5/12">
+                        <img src="assets/hashedbit.png" alt="Hashedbit Innovations" class="rounded-lg shadow-md" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12"><span class="gradient-text">Featured Projects</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1: CI/CD Pipeline -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
+                    <div class="relative">
+                        <img src="assets/cicd.png" alt="CI/CD Pipeline" class="w-full h-48 object-cover" />
+                        <div class="absolute bottom-0 left-0 bg-indigo-600 text-white px-3 py-1 text-sm font-medium">
+                            Jenkins + AWS</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">CI/CD Pipeline with Jenkins</h3>
+                        <p class="text-gray-600 mb-4">Created a complete CI/CD pipeline using Jenkins, GitHub, Maven,
+                            and SonarQube. Deployed Dockerized apps to AWS ECS Fargate.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs">Jenkins</span>
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs">Docker</span>
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs">ECS</span>
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs">SonarQube</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://drive.google.com/file/d/1nbfEpMzZ-st9tVA7JFTf0J6TxLffmqai/view"
+                                target="_blank" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">View
+                                Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Bank Management System -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
+                    <div class="relative">
+                        <img src="assets/bank-management.png" alt="Banking System" class="w-full h-48 object-cover" />
+                        <div class="absolute bottom-0 left-0 bg-indigo-600 text-white px-3 py-1 text-sm font-medium">
+                            Java + MySQL</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Bank Management System</h3>
+                        <p class="text-gray-600 mb-4">Simulated banking operations like account creation, balance
+                            checking, and PIN generation with secure MySQL integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs">Java</span>
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs">MySQL</span>
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs">OOP</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/FuzailAhamad/Bank_Management_System_Project" target="_blank"
+                                class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Cloud Infra with Terraform -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden project-card transition duration-300">
+                    <div class="relative">
+                        <img src="assets/Terraform.png" alt="Terraform AWS" class="w-full h-48 object-cover" />
+                        <div class="absolute bottom-0 left-0 bg-indigo-600 text-white px-3 py-1 text-sm font-medium">AWS
+                            + Terraform</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">AWS Deployment with Terraform</h3>
+                        <p class="text-gray-600 mb-4">Provisioned and deployed an EC2 instance using Terraform scripts
+                            while learning infrastructure as code and debugging deployments.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs">Terraform</span>
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs">EC2</span>
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs">AWS CLI</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/FuzailAhamad/Terraform-HCL" target="_blank"
+                                class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="mb-20 relative">
+            <h2 class="text-3xl font-bold text-center mb-12">
+                <span class="gradient-text">Certifications</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- AWS Certification -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/aws ccp.png" alt="AWS Certified"
+                            class="w-20 h-20 object-contain mr-4 cursor-pointer"
+                            onclick="openModal('assets/aws ccp.png')">
+                        <div>
+                            <h3 class="text-xl font-semibold">AWS Cloud Practitioner</h3>
+                            <p class="text-sm text-gray-500">Amazon Web Services • Issued March 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Hands-on experience with EC2, S3, IAM, and VPC. Created cloud
+                        environments for web app deployment using Terraform and CLI.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">EC2</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">S3</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">IAM</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Terraform</span>
+                    </div>
+                </div>
+
+                <!-- NPTEL Cloud -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/nptel cloud.png" alt="NPTEL" class="w-20 h-20 object-contain mr-4 cursor-pointer"
+                            onclick="openModal('assets/nptel cloud.png')">
+                        <div>
+                            <h3 class="text-xl font-semibold">NPTEL Cloud Computing</h3>
+                            <p class="text-sm text-gray-500">IIT Kharagpur • Elite + Silver</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Studied virtualization, containers, SaaS/IaaS/PaaS, and deployment
+                        strategies with cloud labs and assignments.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Cloud</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Virtualization</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">NPTEL</span>
+                    </div>
+                </div>
+
+                <!-- NPTEL DBMS -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/Nptel dbms.png" alt="NPTEL" class="w-20 h-20 object-contain mr-4 cursor-pointer"
+                            onclick="openModal('assets/Nptel dbms.png')">
+                        <div>
+                            <h3 class="text-xl font-semibold">NPTEL DBMS</h3>
+                            <p class="text-sm text-gray-500">IIT Madras</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Learned SQL, ER modeling, normalization, transaction control, and
+                        indexing with hands-on assignments and quizzes.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">DBMS</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">NPTEL</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal for Image Preview -->
+            <div id="certModal"
+                class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm hidden items-center justify-center z-50 transition-all duration-300 ease-in-out">
+                <div class="relative max-w-3xl mx-auto transform scale-95 opacity-0 transition-transform duration-300 ease-in-out"
+                    id="modalContent">
+                    <button onclick="closeModal()"
+                        class="absolute top-2 right-2 bg-white rounded-full p-1 shadow text-black hover:bg-red-500 hover:text-white transition">✕</button>
+                    <img id="modalImage" src="" alt="Certificate Preview"
+                        class="max-h-[90vh] max-w-full rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12">
+                <span class="gradient-text">Get In Touch</span>
+            </h2>
+            <div class="max-w-xl mx-auto bg-indigo-600 text-white p-8 rounded-2xl shadow-md">
+                <h3 class="text-2xl font-semibold mb-4">Let's work together!</h3>
+                <p class="mb-6 text-white/90">
+                    I'm currently open to new opportunities and collaborations.
+                    Whether you have a project in mind or just want to connect, feel free to reach out.
+                </p>
+
+                <div class="space-y-6 text-white">
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <div>
+                            <h4 class="font-medium">Email</h4>
+                            <p>fuzailahmad672@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v6a2 2 0 01-2 2h-2v4z" />
+                        </svg>
+                        <div>
+                            <h4 class="font-medium">LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/fuzail-ahamad-329287251" target="_blank"
+                                class="underline text-white hover:text-white/80">
+                                linkedin.com/in/fuzail-ahamad
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                        <div>
+                            <h4 class="font-medium">GitHub</h4>
+                            <a href="https://github.com/FuzailAhamad" target="_blank"
+                                class="underline text-white hover:text-white/80">
+                                github.com/FuzailAhamad
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-xl font-bold mb-2 gradient-text">Fuzail Ahamad</div>
+                    <p class="text-gray-400">DevOps & Java Full Stack Engineer | AWS Certified | NPTEL Cloud & DBMS</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/FuzailAhamad" target="_blank"
+                        class="text-gray-400 hover:text-white transition">
+                        <!-- GitHub Icon -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 
+              6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703
+              -2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+              -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032
+              .892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338
+              -2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+              -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026
+              A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337
+              1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651
+              .64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943
+              .359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747
+              0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+              C22 6.484 17.522 2 12 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/fuzail-ahamad-329287251" target="_blank"
+                        class="text-gray-400 hover:text-white transition">
+                        <!-- LinkedIn Icon -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037
+              -1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046
+              c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337
+              7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063
+              1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782
+              13.019H3.555V9h3.564v11.452z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Fuzail Ahamad. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        function openModal(imageUrl) {
+            const modal = document.getElementById("certModal");
+            const content = document.getElementById("modalContent");
+            const image = document.getElementById("modalImage");
+
+            image.src = imageUrl;
+            modal.classList.remove("hidden");
+            document.body.classList.add("overflow-hidden");
+
+            setTimeout(() => {
+                content.classList.remove("scale-95", "opacity-0");
+                content.classList.add("scale-100", "opacity-100");
+            }, 20);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("certModal");
+            const content = document.getElementById("modalContent");
+
+            content.classList.add("scale-95", "opacity-0");
+            content.classList.remove("scale-100", "opacity-100");
+
+            setTimeout(() => {
+                modal.classList.add("hidden");
+                document.getElementById("modalImage").src = "";
+                document.body.classList.remove("overflow-hidden");
+            }, 300);
+        }
+
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.timeline-item, .project-card');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Set initial styles for animation
+        document.querySelectorAll('.timeline-item, .project-card').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        // Add event listener for scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Trigger once on page load
+        animateOnScroll();
+    </script>
+</body>
+
+</html>
